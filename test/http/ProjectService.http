@@ -1,0 +1,126 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### ProjectSet
+# @name ProjectSet_GET
+GET {{server}}/odata/v4/project/ProjectSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### ProjectSet
+# @name ProjectSet_POST
+POST {{server}}/odata/v4/project/ProjectSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "Name": "BTPCAP",
+  "StartDate": "2025-07-23",
+  "EndDate": "2026-03-15",
+  "Status": "GoLive",
+  "Budget": 546828236483.66
+}
+
+
+### ProjectSet
+# @name ProjectSet_PATCH
+PATCH {{server}}/odata/v4/project/ProjectSet/b09e84bf-f919-462b-9f2e-929986cbe872
+Authorization: Basic {{username}}:{{password}}
+Content-Type: application/json
+
+{
+  
+
+  "Budget": 76828236483.66
+}
+
+
+### ProjectSet
+# @name ProjectSet_DELETE
+DELETE {{server}}/odata/v4/project/ProjectSet/b09e84bf-f919-462b-9f2e-929986cbe872
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### EmployeeSet
+# @name EmployeeSet_GET
+GET {{server}}/odata/v4/project/EmployeeSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### EmployeeSet
+# @name EmployeeSet_POST
+POST {{server}}/odata/v4/project/EmployeeSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "EmployeeID": "35607036-0884-458e-92f2-e7db007a3013",
+  "Name": "Naveen",
+  "MobileNumber": 1234567890,
+  "Email": "Naveen@gmail.com",
+  "Department": "SAP",
+  "DateofBirth": "1996-12-12",
+  "Location": "Hyderabad",
+  "Salary": 2119017.91
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_PATCH
+PATCH {{server}}/odata/v4/project/EmployeeSet/35607036-0884-458e-92f2-e7db007a3013
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+
+  "MobileNumber": 7989776655
+
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_DELETE
+DELETE {{server}}/odata/v4/project/EmployeeSet/35607036-0884-458e-92f2-e7db007a3013
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### TimesheetSet
+# @name TimesheetSet_GET
+GET {{server}}/odata/v4/project/TimesheetSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### TimesheetSet
+# @name TimesheetSet_POST
+POST {{server}}/odata/v4/project/TimesheetSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "Date": "2026-02-13",
+  "Hours": 8,
+  "Description": "HTTP Calls"
+}
+
+
+### TimesheetSet
+# @name TimesheetSet_PATCH
+PATCH {{server}}/odata/v4/project/TimesheetSet/b1c82eb2-c560-43f1-afa0-90253e179e39
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+
+  "Hours": 9
+}
+
+
+### TimesheetSet
+# @name TimesheetSet_DELETE
+DELETE {{server}}/odata/v4/project/TimesheetSet/b1c82eb2-c560-43f1-afa0-90253e179e39
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

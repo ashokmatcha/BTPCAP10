@@ -1,0 +1,33 @@
+BTP CAP Architecture
+
+DB  = Where we create Database
+SRV = Middler where like REST Services
+APP = Front End Application
+package.json = It has all dependecies of our Application
+package-lock.json = same like packe.json but it is in lock mode
+
+https://cap.cloud.sap/docs/cds/types
+
+
+Decimal(3,2);
+Total Length is 3 and after 3 letters you can use . and after dot length will be 2
+100.15
+Decimal(15,2);
+123456789012345.00
+String
+
+
+Commands
+ cds compile db/<filename> --to sql
+ cds compile db/Schema --to sql =  To compile DB
+ cds add data --records 5 = To add 5 dummy data 
+
+
+
+ CRUD
+ C = create
+ R = Read or getting the data
+ U = update
+ D = Delete
+
+
