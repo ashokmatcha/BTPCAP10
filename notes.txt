@@ -30,4 +30,10 @@ Commands
  U = update
  D = Delete
 
+To get The data we have few more functionlities like filter ,Serach,Top and Skip
+lt = lessthan
+gt = Greater Than
+eq = Equal
+ne = not Equal
+
 

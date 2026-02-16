@@ -8,6 +8,18 @@
 GET {{server}}/odata/v4/project/ProjectSet
 Authorization: Basic {{username}}:{{password}}
 
+### ProjectSet TO get the single record
+# @name ProjectSet_GET
+GET {{server}}/odata/v4/project/ProjectSet/10387734-b8dd-454e-a487-b5dc1530cc68
+Authorization: Basic {{username}}:{{password}}
+
+
+
+### ProjectSet TO Filter Based on condtion(lt,gt,eq,ne)
+# @name ProjectSet_GET
+GET {{server}}/odata/v4/project/ProjectSet?$filter=Status eq 'GoLive' 
+Authorization: Basic {{username}}:{{password}}
+
 
 ### ProjectSet
 # @name ProjectSet_POST
@@ -92,6 +104,8 @@ Authorization: Basic {{username}}:{{password}}
 # @name TimesheetSet_GET
 GET {{server}}/odata/v4/project/TimesheetSet
 Authorization: Basic {{username}}:{{password}}
+
+
 
 
 ### TimesheetSet
