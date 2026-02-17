@@ -21,6 +21,12 @@ GET {{server}}/odata/v4/project/ProjectSet?$filter=Status eq 'GoLive'
 Authorization: Basic {{username}}:{{password}}
 
 
+### ProjectSet TO Filter Based on condtion(lt,gt,eq,ne)
+# @name ProjectSet_GET
+GET {{server}}/odata/v4/project/ProjectSet?$filter=StartDate gt '2019-01-01'
+Authorization: Basic {{username}}:{{password}}
+
+
 ### ProjectSet
 # @name ProjectSet_POST
 POST {{server}}/odata/v4/project/ProjectSet
@@ -61,6 +67,17 @@ Authorization: Basic {{username}}:{{password}}
 GET {{server}}/odata/v4/project/EmployeeSet
 Authorization: Basic {{username}}:{{password}}
 
+### EmployeeSet Pagination to Skip 4 records and disply next 3 records
+# @name EmployeeSet_GET
+GET {{server}}/odata/v4/project/EmployeeSet?$top=3&$skip=4
+Authorization: Basic {{username}}:{{password}}
+
+
+### EmployeeSet To get only Spefic fields
+# @name EmployeeSet_GET
+GET {{server}}/odata/v4/project/EmployeeSet?$select=Name,Department
+Authorization: Basic {{username}}:{{password}}
+
 
 ### EmployeeSet
 # @name EmployeeSet_POST
@@ -69,14 +86,14 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "EmployeeID": "35607036-0884-458e-92f2-e7db007a3013",
+
   "Name": "Naveen",
   "MobileNumber": 1234567890,
-  "Email": "Naveen@gmail.com",
+  "Email": "Naveen123@gmail.com",
   "Department": "SAP",
   "DateofBirth": "1996-12-12",
   "Location": "Hyderabad",
-  "Salary": 2119017.91
+  "Salary": 119017.91
 }
 
 

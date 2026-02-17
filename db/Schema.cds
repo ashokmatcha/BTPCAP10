@@ -11,13 +11,13 @@ Budget : Decimal(15,2);
 
 entity Employee{
     Key EmployeeID:UUID;
-    Name : String(50);
+    Name : String(50) @mandatory;
     MobileNumber:Integer;
-    Email:String(60);
+    Email:String(60) @assert.format : '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' @assert.format.message :'Kinldy Provide Correct format of email';
     Department:String(20);
-    DateofBirth:Date;
+    DateofBirth:Date ;
     Location:String(50);
-    Salary: Decimal(9, 2);
+    Salary: Decimal(9, 2) @assert.range:[1000000.00,2000000.00];
 }
 entity Timesheet{
     Key ID: UUID;
