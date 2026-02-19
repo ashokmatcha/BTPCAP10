@@ -1,35 +1,44 @@
 namespace BTPCAP10;
 //BTPCAP10_Project//Namespace_Tablename
-using { cuid,managed,temporal ,Currency } from '@sap/cds/common';
+using { cuid,Currency } from '@sap/cds/common';
 
+Type DataLength : String(150);
+Type Address : String(200);
 
-entity Project :cuid,managed,temporal{
+aspect Reusablecontent{
+Location:DataLength;
+}
+aspect Address1{
+Address:Address
+}
+entity Project :cuid,Reusablecontent,Address1{
 //Key ID: UUID;
-Name : String(50);
-StartDate : Date;
-EndDate:Date;
-Status:String(30);
-Budget : Decimal(15,2);
+Name : DataLength;
+StartDate : Date @title:'Start Date';
+EndDate:Date @title : 'End Date';
+Status:String(30) @title : 'Project Status';
+Budget : Decimal(15,2) @title : 'Project Budget';
 Currency: Currency ;
+Address:Address @title : 'Project Address';
 }
 @assert.unique:
     {
 Email:[Email],
 MobileNumber:[MobileNumber]
     }  
-entity Employee : cuid,managed,temporal{
+entity Employee : cuid,Reusablecontent{
  //   Key EmployeeID:UUID;
-    Name : String(50) @mandatory;
-    MobileNumber:Integer ;
+    Name : DataLength @mandatory @title : 'Employee Name';
+    MobileNumber:Integer  @title: 'Mobile Number';
     Email:String(60) @assert.format : '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' @assert.format.message :'Kinldy Provide Correct format of email';
     Department:String(20);
-    DateofBirth:Date ;
-    Location:String(50);
+    DateofBirth:Date @title : 'Date of Birth' ;
+    
     Salary: Decimal(9, 2) @assert.range:[1000000.00,2000000.00];
 }
-entity Timesheet : cuid,managed,temporal{
+entity Timesheet : cuid,Reusablecontent{
  //   Key ID: UUID;
-    Date:Date;
+    Date:Date ;
     Hours:Integer;
-    Description : String(100)
+    Description : String(100) @title : 'Content';
 }
