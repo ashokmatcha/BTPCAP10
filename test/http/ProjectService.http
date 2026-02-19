@@ -88,12 +88,12 @@ Authorization: Basic {{username}}:{{password}}
 {
 
   "Name": "Naveen",
-  "MobileNumber": 1234567890,
+  "MobileNumber": 1234567899,
   "Email": "Naveen123@gmail.com",
   "Department": "SAP",
   "DateofBirth": "1996-12-12",
   "Location": "Hyderabad",
-  "Salary": 119017.91
+  "Salary": 1019017.91
 }
 
 

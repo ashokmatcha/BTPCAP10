@@ -38,3 +38,15 @@ ne = not Equal
 
 
 
+Aspects:Reusable fields
+
+Again contains 2 Types 
+
+1.Standard Aspects/SAP Aspects
+SAP Provided some reusable fields , Structures and Tables these is called Standard Aspects
+
+Type used for Data Type Level
+aspect contains fields
+
+
+2.Custom Aspects
