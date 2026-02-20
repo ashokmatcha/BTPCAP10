@@ -54,3 +54,17 @@ aspect contains fields
 
 
 https://help.sap.com/docs/SAP_ENABLE_NOW/46fcbeb139c4487ba713638cd75d1a19/47f3e0526dac10148dacf2fa1e127eae.html
+
+
+Associations:
+It is similar like a Inner join but on demand /Lazy loading 
+It contains 2 Types
+1-1 Associations =1 header and 1 Line Item ex:Tata punch belongs to only TATA Cars
+1-M Associtaions = 1 header and Many Line Items ex: Tata cars have multiple cars ex: punch,nano
+
+Project(1)(1)
+
+Employees(M)(1)(1)(1)
+
+
+Timesheet(M)(1)
