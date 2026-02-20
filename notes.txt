@@ -50,3 +50,7 @@ aspect contains fields
 
 
 2.Custom Aspects
+
+
+
+https://help.sap.com/docs/SAP_ENABLE_NOW/46fcbeb139c4487ba713638cd75d1a19/47f3e0526dac10148dacf2fa1e127eae.html

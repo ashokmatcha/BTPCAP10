@@ -14,12 +14,12 @@ Address:Address
 entity Project :cuid,Reusablecontent,Address1{
 //Key ID: UUID;
 Name : DataLength;
-StartDate : Date @title:'Start Date';
-EndDate:Date @title : 'End Date';
-Status:String(30) @title : 'Project Status';
-Budget : Decimal(15,2) @title : 'Project Budget';
+StartDate : Date @title:'{i18n>StartDate}';
+EndDate:Date @title : '{i18n>EndDate}';
+Status:String(30) @title : '{i18n>Status}';
+Budget : Decimal(15,2) @title : '{i18n>Budget}';
 Currency: Currency ;
-Address:Address @title : 'Project Address';
+Address:Address @title : '{i18n>Address}';
 }
 @assert.unique:
     {
