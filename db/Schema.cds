@@ -21,7 +21,7 @@ Status:String(30) @title : '{i18n>Status}';
 Budget : Decimal(15,2) @title : '{i18n>Budget}';
 Currency: Currency ;
 Address:Address @title : '{i18n>Address}';
-Employees:Association to many Employee on Employees.Project = $self;
+Employees:Association to   many Employee on Employees.Project = $self;//Employee.Project_ID = ID
 }
 @assert.unique:
     {

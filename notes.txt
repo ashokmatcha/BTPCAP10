@@ -68,3 +68,20 @@ Employees(M)(1)(1)(1)
 
 
 Timesheet(M)(1)
+
+Expandset/Get ExpandedSet:fetch data from multipleTable
+Deep Insert/Create Insert/Create Deep = If you want to insert data into multiple tables will use deep insert
+GET = TO get the data
+POST = To POST the data/insert the data
+PATCH = updating the data
+Delete = Delete the data
+
+Difference between Associations and Composition
+
+Assocition and Compostion used for Fetching the data between Tables (Multiple Tables)
+but in Assocition we can not do Deep Insert Opertaion means we can not insert the data in to multiple tables
+but in Compoistion we can insert the data into multiple tables
+If we use compostion if delete parent item child items also delete we can call relationship dependent means 
+but in Assocition if we delete parent item only parent items will delete  we can call relation ship independent 
+
+

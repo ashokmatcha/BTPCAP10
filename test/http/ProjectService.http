@@ -43,6 +43,47 @@ Authorization: Basic {{username}}:{{password}}
 
 
 ### ProjectSet
+# @name ProjectSet_POST
+POST {{server}}/odata/v4/project/ProjectSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+{
+  "Name": "BTPCAP",
+  "StartDate": "2025-07-23",
+  "EndDate": "2026-03-15",
+  "Status": "GoLive",
+  "Budget": 546828236483.66,
+  "Employees":[{
+"Location": "Location-15001138",
+          
+          "Name": "Naveen123",
+          "MobileNumber": 9704377367,
+          "Email": "Naveen13@gmail.com",
+          "Department": "Department-15001138",
+          "DateofBirth": "2014-08-08",
+          "Salary": 1814204.64
+    
+  },
+  {
+"Location": "Location-15001138",
+          
+          "Name": "Naveen123",
+          "MobileNumber": 9704377467,
+          "Email": "Naveen12@gmail.com",
+          "Department": "Department-15001138",
+          "DateofBirth": "2014-08-08",
+          "Salary": 1814204.64
+    
+  }
+  ]
+}
+
+
+
+
+### ProjectSet
 # @name ProjectSet_PATCH
 PATCH {{server}}/odata/v4/project/ProjectSet/b09e84bf-f919-462b-9f2e-929986cbe872
 Authorization: Basic {{username}}:{{password}}
@@ -57,7 +98,7 @@ Content-Type: application/json
 
 ### ProjectSet
 # @name ProjectSet_DELETE
-DELETE {{server}}/odata/v4/project/ProjectSet/b09e84bf-f919-462b-9f2e-929986cbe872
+DELETE {{server}}/odata/v4/project/ProjectSet/11310334-8a9e-4c36-b32e-4eeb21757930
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
