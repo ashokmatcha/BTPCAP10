@@ -35,8 +35,7 @@ Authorization: Basic {{username}}:{{password}}
 
 {
   "Name": "BTPCAP",
-  "StartDate": "2025-07-23",
-  "EndDate": "2026-03-15",
+  "StartDate": "2026-07-23",
   "Status": "GoLive",
   "Budget": 546828236483.66
 }

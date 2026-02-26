@@ -21,6 +21,8 @@ Commands
  cds compile db/<filename> --to sql
  cds compile db/Schema --to sql =  To compile DB
  cds add data --records 5 = To add 5 dummy data 
+ cds add handler = To create handler file i.e .js file in srv folder
+ cds add http = To create http file
 
 
 
@@ -83,5 +85,54 @@ but in Assocition we can not do Deep Insert Opertaion means we can not insert th
 but in Compoistion we can insert the data into multiple tables
 If we use compostion if delete parent item child items also delete we can call relationship dependent means 
 but in Assocition if we delete parent item only parent items will delete  we can call relation ship independent 
+
+
+Custom Handlers
+If you want to write any validations or any logic before or after doing any operation (CRUD) will use Custom Handlers
+
+Hook Methods/Event Methods/Handler
+
+1.before
+Before doing any operation if you want to write the logic will use Before Hook Method
+Ex:Validation and if we missed to give any date may be we can update system date
+2.after
+Once you completed operation you want to write any logic will use after hook Method
+Ex: Count or you want to disply the data spefic condition
+3.On
+
+
+CRUD operations
+Create
+Read
+update
+Delete
+Standard Syntax for Handlers:
+this.handler('CRUD operations',EntitySet)
+this.Before('CREATE',ProjectSet)
+this.before('CREATE',EmployeeSet)
+this.before('READ',EmployeeSet)
+
+this.before('[CREATE,READ]',EmployeeSet)
+
+Syncronous and Asyncronous
+
+Syncronous :
+Line by line execution and it will wait for until previous lines execution
+
+Asyncronous
+It won't wait until previous line execution
+
+Debugging
+If you want to see Line by Line Execution and logic execution line by line will use Debugging
+
+F6 = Pause 
+Step Over(F10) = Line by line execution and 1 debugger to another Debugger execution
+Step into(Alt+f11) = if you want to go inside loop will use this
+Step Out(Shift+f11)= If you want to come outside loop will use this
+Restart(Ctrl+shift+F5) = To Restart Debuggers
+Stop(Shift+f5) = To Stop Debugger
+
+
+
 
 
