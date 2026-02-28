@@ -126,11 +126,26 @@ Debugging
 If you want to see Line by Line Execution and logic execution line by line will use Debugging
 
 F6 = Pause 
-Step Over(F10) = Line by line execution and 1 debugger to another Debugger execution
+Step Over(F10) = Line by line execution 
 Step into(Alt+f11) = if you want to go inside loop will use this
 Step Out(Shift+f11)= If you want to come outside loop will use this
 Restart(Ctrl+shift+F5) = To Restart Debuggers
 Stop(Shift+f5) = To Stop Debugger
+Continue(F5) = To execute debugger and 1 debugger to another Debugger execution
+
+
+Comparision
+
+< 
+>
+==
+
+
+Employees Tables(Empoyee - Travel)(1-Many)
+
+Travel Request(Travel - Employee)(1-1)(Travel = Expesense)(1-Many)
+
+ExpenseItems(1-1)(Items to Request)
 
 
 
