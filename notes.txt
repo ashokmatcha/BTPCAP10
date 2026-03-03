@@ -147,7 +147,28 @@ Travel Request(Travel - Employee)(1-1)(Travel = Expesense)(1-Many)
 
 ExpenseItems(1-1)(Items to Request)
 
-
+Var = Oldest one we can reassign and redeclare the values
+let = we can declare once nad we can reassaign values
+const = once you declare the value you can not change and you can not re assign the values
+ var a = 10;
+ var a = 20;
+ a  values becomes 20;
+ let b = 20;
+ let b = 30;
+ it will give error
+ let b = 20;
+ b = 40;
+ b values becomes 40;
+ 
+ const c = 30;
+ const c = 50;
+ you will get error
+ const c= 50;
+ c = 60;
+ you will get error
+ const c =10;
+ c values becomes 10;
+ 
 
 
 

@@ -6,6 +6,10 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
 
   this.before (['CREATE', 'UPDATE'], ProjectSet, async (oEvent) => {
     debugger;
+    var Date1 = new Date();
+   var Date1 = Date1.toISOString();
+    var CurrentDate = Date1.split('T')[0];
+    oEvent.data.EndDate = CurrentDate;
     // Less than Comparision means 1 variable value less than 2 nd variable value
    if(oEvent.data.EndDate < oEvent.data.StartDate){
       debugger;
