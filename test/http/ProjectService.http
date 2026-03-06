@@ -97,7 +97,7 @@ Content-Type: application/json
 
 ### ProjectSet
 # @name ProjectSet_DELETE
-DELETE {{server}}/odata/v4/project/ProjectSet/11310334-8a9e-4c36-b32e-4eeb21757930
+DELETE {{server}}/odata/v4/project/ProjectSet/11310331-8896-4a38-9f27-3ef69c0e28be
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 

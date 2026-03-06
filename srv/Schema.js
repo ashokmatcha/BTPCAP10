@@ -26,6 +26,16 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
     console.log('Before CREATE/UPDATE ProjectSet', oEvent.data)
     debugger;
   })
+  this.before('DELETE',ProjectSet,async(req) =>{
+debugger;
+const data =  await SELECT.one.from(ProjectSet).where({
+  ID:req.data.ID
+})
+if(data.Status == 'GoLive'){
+  req.error('You can not delete status Golive Projects')
+}
+
+  })
   
   this.after ('READ', ProjectSet, async (projectSet, req) => {
     console.log('After READ ProjectSet', projectSet)
@@ -38,6 +48,9 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
   })
   this.before (['CREATE', 'UPDATE'], TimesheetSet, async (req) => {
     console.log('Before CREATE/UPDATE TimesheetSet', req.data)
+    if(req.data.Hours > 8){
+      req.error('You can not enter more than 8 Hours')
+    }
   })
   this.after ('READ', TimesheetSet, async (timesheetSet, req) => {
     console.log('After READ TimesheetSet', timesheetSet)

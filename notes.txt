@@ -170,5 +170,18 @@ const = once you declare the value you can not change and you can not re assign 
  c values becomes 10;
  
 
+ https://www.w3schools.com/js/js_array_methods.asp
+
+
+ To Get The data from Table need to use SELECT 
+TO Insert the data into table need to use Insert
+To Update the data into table need to use Update
+To Delete the data from the table need to use Delete
+To Modify The Data(IF Data is there it will act as update if data is not there it will act as a insert) need to use UPSERT
+
+https://cap.cloud.sap/docs/node.js/cds-ql#select
+
+
+
 
 
