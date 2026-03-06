@@ -36,7 +36,7 @@ entity Employee : cuid,Reusablecontent{
     Email:String(60) @assert.format : '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' @assert.format.message :'Kinldy Provide Correct format of email';
     Department:String(20);
     DateofBirth:Date @title : 'Date of Birth' ;   
-  Salary: Decimal(9, 2) @assert.range:[1000000.00,2000000.00];
+   Salary: Decimal(9, 2) @assert.range:[1000000.00,2000000.00];
     virtual Age : Integer;
     Virtual Increment : Decimal(13,2);
     Virtual Designation : String(30);

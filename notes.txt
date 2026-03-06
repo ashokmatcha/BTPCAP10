@@ -181,6 +181,8 @@ To Modify The Data(IF Data is there it will act as update if data is not there i
 
 https://cap.cloud.sap/docs/node.js/cds-ql#select
 
+for each,while loop ,for loop
+
 
 
 

@@ -5,14 +5,12 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
   const { ProjectSet, EmployeeSet, TimesheetSet } = cds.entities('ProjectService')
 
   this.before (['CREATE', 'UPDATE'], ProjectSet, async (oEvent) => {
-    debugger;
     var Date1 = new Date();
    var Date1 = Date1.toISOString();
     var CurrentDate = Date1.split('T')[0];
     oEvent.data.EndDate = CurrentDate;
     // Less than Comparision means 1 variable value less than 2 nd variable value
    if(oEvent.data.EndDate < oEvent.data.StartDate){
-      debugger;
       oEvent.error('End Date should not be less than Start Date')
     }
     // greater than Comparision means 1 variable value  greater than 2 nd variable value
@@ -24,10 +22,9 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
       debugger;
     }*/
     console.log('Before CREATE/UPDATE ProjectSet', oEvent.data)
-    debugger;
   })
   this.before('DELETE',ProjectSet,async(req) =>{
-debugger;
+
 const data =  await SELECT.one.from(ProjectSet).where({
   ID:req.data.ID
 })
@@ -44,7 +41,27 @@ if(data.Status == 'GoLive'){
     console.log('Before CREATE/UPDATE EmployeeSet', req.data)
   })
   this.after ('READ', EmployeeSet, async (employeeSet, req) => {
-    console.log('After READ EmployeeSet', employeeSet)
+    console.log('After READ EmployeeSet', employeeSet);
+    let DateofBirth;
+    let CurrentYear;
+    let BirthYear;
+    for(let emp of employeeSet){
+      if(emp.DateofBirth){
+CurrentYear = new Date().getFullYear();
+BirthYear = emp.DateofBirth.split('-')[0];
+emp.Age = CurrentYear - BirthYear;
+
+      }
+      if(emp.Salary <= '1500000'){
+        emp.Designation = 'Senior Consultant'
+        emp.increment = '20';
+      ///  emp.Increment = parseFloat(emp.Salary * 1.20);
+      }else{
+        emp.Designation = 'Manager'
+        emp.increment = '10'
+        //emp.Increment = parseFloat(emp.Salary * 1.10);
+      }
+    }
   })
   this.before (['CREATE', 'UPDATE'], TimesheetSet, async (req) => {
     console.log('Before CREATE/UPDATE TimesheetSet', req.data)
