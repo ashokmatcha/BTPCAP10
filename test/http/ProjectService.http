@@ -195,3 +195,15 @@ Authorization: Basic {{username}}:{{password}}
 DELETE {{server}}/odata/v4/project/TimesheetSet/b1c82eb2-c560-43f1-afa0-90253e179e39
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
+
+
+### Function
+# @name getEmployeeDOB
+GET {{server}}/odata/v4/project/getEmployeeDOB(ID='15001140-59a5-4f02-9754-0c3c69c1970b')
+Authorization: Basic {{username}}:{{password}}
+
+
+### Function
+# @name getTotalProjectHours
+GET {{server}}/odata/v4/project/getTotalProjectHours
+Authorization: Basic {{username}}:{{password}}

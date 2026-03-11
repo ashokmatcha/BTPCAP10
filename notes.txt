@@ -99,7 +99,13 @@ Ex:Validation and if we missed to give any date may be we can update system date
 Once you completed operation you want to write any logic will use after hook Method
 Ex: Count or you want to disply the data spefic condition
 3.On
-
+If you want to override evrything will use on means override sap Standard functionlity
+Again It contains 2 Types
+1.function:If you want to get the spefic data from table will use function
+To Define the function we have to use the keyword called function
+HTTP : Get
+2.Action : If you want to post,delete,update the date to table will use action
+To Define the action we have to use the keyword called action
 
 CRUD operations
 Create
@@ -182,6 +188,8 @@ To Modify The Data(IF Data is there it will act as update if data is not there i
 https://cap.cloud.sap/docs/node.js/cds-ql#select
 
 for each,while loop ,for loop
+
+
 
 
 

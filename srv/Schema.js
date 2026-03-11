@@ -72,7 +72,18 @@ emp.Age = CurrentYear - BirthYear;
   this.after ('READ', TimesheetSet, async (timesheetSet, req) => {
     console.log('After READ TimesheetSet', timesheetSet)
   })
+this.on('getEmployeeDOB',async(req)=>{
+ // const data = await SELECT.one.from(EmployeeSet).where({ID:req.data.ID})
+  // return data.DateofBirth;
+ const data = await SELECT.one.from(EmployeeSet).columns('DateofBirth').where({ID:req.data.ID});
+ return data;
 
+
+})
+
+this.on('getTotalProjectHours',async(req)=>{
+  
+})
 
   return super.init()
 }}
