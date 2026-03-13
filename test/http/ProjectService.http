@@ -207,3 +207,22 @@ Authorization: Basic {{username}}:{{password}}
 # @name getTotalProjectHours
 GET {{server}}/odata/v4/project/getTotalProjectHours
 Authorization: Basic {{username}}:{{password}}
+
+
+
+### Function
+# @name getTotalProjectBudget
+GET {{server}}/odata/v4/project/getTotalProjectBudget
+Authorization: Basic {{username}}:{{password}}
+
+
+
+### promoteEmployee
+# @name ProjectSet_POST
+POST {{server}}/odata/v4/project/promoteEmployee
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID" :"15001137-2e35-479a-92aa-ae35ea06049a"
+}

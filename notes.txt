@@ -189,6 +189,9 @@ https://cap.cloud.sap/docs/node.js/cds-ql#select
 
 for each,while loop ,for loop
 
+sum,max,min,avg
+
+
 
 
 

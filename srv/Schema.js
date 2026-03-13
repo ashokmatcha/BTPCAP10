@@ -1,4 +1,5 @@
-const cds = require('@sap/cds')
+const cds = require('@sap/cds');
+const { SELECT } = require('@sap/cds/lib/ql/cds-ql');
 
 module.exports = class ProjectService extends cds.ApplicationService { init() {
 
@@ -82,7 +83,41 @@ this.on('getEmployeeDOB',async(req)=>{
 })
 
 this.on('getTotalProjectHours',async(req)=>{
-  
+  const data = await SELECT.one.from(TimesheetSet).columns('Min(Hours)');
+  return data
+})
+
+this.on('getTotalProjectBudget',async(req)=>{
+ const data = await SELECT.one.from(ProjectSet).columns('sum(Budget)');
+ return data; 
+})
+
+
+this.on('promoteEmployee',async(req)=>{
+//We  got the data
+//Validate data again Id in Employee table
+const data = await SELECT.one.from(EmployeeSet).where({
+  ID:req.data.ID
+})
+//IF Data is not there in table will through an error
+if(!data){
+ return req.error('data not found');
+}
+data.Salary = parseFloat(data.Salary * 1.30);
+
+await UPDATE(EmployeeSet).set({
+Salary : data.Salary
+
+}).where({
+  ID:req.data.ID
+})
+const returndata = await SELECT.one.from(EmployeeSet).where({ID:req.data.ID})
+return returndata;
+//if data available will give 30% Hike
+//update Table 
+//and return table
+
+
 })
 
   return super.init()

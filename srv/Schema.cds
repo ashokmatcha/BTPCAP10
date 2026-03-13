@@ -7,6 +7,8 @@ service ProjectService{
 
     function getTotalProjectHours() returns Integer;
     function getEmployeeDOB(ID:UUID) returns Date;
+    function getTotalProjectBudget() returns Decimal;
+    action promoteEmployee(ID:UUID) returns EmployeeSet;
 }
 
 //projectService/ProjectSet
