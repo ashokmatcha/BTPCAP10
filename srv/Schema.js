@@ -5,6 +5,7 @@ module.exports = class ProjectService extends cds.ApplicationService { init() {
 
   const { ProjectSet, EmployeeSet, TimesheetSet } = cds.entities('ProjectService')
 
+
   this.before (['CREATE', 'UPDATE'], ProjectSet, async (oEvent) => {
     var Date1 = new Date();
    var Date1 = Date1.toISOString();
@@ -83,7 +84,7 @@ this.on('getEmployeeDOB',async(req)=>{
 })
 
 this.on('getTotalProjectHours',async(req)=>{
-  const data = await SELECT.one.from(TimesheetSet).columns('Min(Hours)');
+  const data = await SELECT.one.from(TimesheetSet).columns('sum(Hours)');
   return data
 })
 

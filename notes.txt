@@ -191,9 +191,29 @@ for each,while loop ,for loop
 
 sum,max,min,avg
 
+https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/468a97775123488ab3345a0c48cadd8f/148892ff9aea4a18b912829791e38f3e.html?version=7.52.8
+https://ui5.sap.com/versionoverview.html
+
+sap.ui,sap.m.,sap.fo,sap.core
+
+Salesorder/{key}
+Salesorder
+SalesOrderObjectPage
 
 
+SalesOrderObjectPage
+https://ui5.sap.com/#/topic/2366345a94f64ec1a80f9d9ce50a59ef
 
+
+Fiori/UI5 Flow of Execution
+
+Component.js
+
+Manifest.json
+
+routes
+
+Primary Route and target
 
 
 

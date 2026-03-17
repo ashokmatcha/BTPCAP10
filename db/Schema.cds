@@ -15,7 +15,7 @@ entity Project :cuid,Reusablecontent,Address1{
 //Key ID: UUID;
 
 Name : DataLength;
-StartDate : Date @title:'{i18n>StartDate}';
+StartDate : Date @title:'{i18n>StartDate}'; 
 EndDate:Date @title : '{i18n>EndDate}';
 Status:String(30) @title : '{i18n>Status}';
 Budget : Decimal(15,2) @title : '{i18n>Budget}';
