@@ -32,7 +32,7 @@ entity Employee : cuid,Reusablecontent{
  //   Key EmployeeID:UUID;
  Project :Association to Project;//Association to one Project ///field_Associtaed Key field //Project_ID   "Project_ID = Project Table Key field value should be the same " PROject_ID = Project(ID)"
     Name : DataLength @mandatory @title : 'Employee Name';
-    MobileNumber:Integer  @title: 'Mobile Number';
+    MobileNumber:String  @title: 'Mobile Number';
     Email:String(60) @assert.format : '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' @assert.format.message :'Kinldy Provide Correct format of email';
     Department:String(20);
     DateofBirth:Date @title : 'Date of Birth' ;   

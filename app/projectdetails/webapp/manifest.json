@@ -129,7 +129,8 @@
                     "type": "ResponsiveTable"
                   }
                 }
-              }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },
@@ -140,7 +141,24 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/ProjectSet"
+              "contextPath": "/ProjectSet",
+              "controlConfiguration": {
+                "Employees/@com.sap.vocabularies.UI.v1.LineItem#EmployeeInformation": {
+                  "tableSettings": {
+                    "enableExport": false,
+                    "personalization": {
+                      "column": false
+                    },
+                    "widthIncludingColumnHeader": true,
+                    "condensedTableLayout": false,
+                    "disableCopyToClipboard": true,
+                    "type": "ResponsiveTable",
+                    "quickVariantSelection": {
+                      "showCounts": false
+                    }
+                  }
+                }
+              }
             }
           }
         }
