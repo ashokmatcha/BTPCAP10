@@ -217,4 +217,56 @@ Primary Route and target
 
 
 
+Types of bindings
 
+1.Property Binding
+This is used to bind single property of UI Control
+ex:Input,TextBox Text area
+2.Aggregation Binding
+This is used for binding in Aggregation Level ex:Tables and List
+3.Element Binding
+This is also called Context binding this binds an entire contorl and its child controls to  specfic object with the model.This establishes a binding contect ,allowing for relativ binding paths within that contol and its children it wi mostly used for Master-detail scenario
+4.Expression Binding
+This is powerful feature allows you to define  complex JavaScript expressions  directly in the binding synatx to foramt or manipulate data before displayed
+
+
+MVC
+
+Model View controller
+
+models
+
+4 Types of models
+1.Odata model
+This is also called Server Model if you want to get the data from odata services or real data will use Odata Model
+2.Json model
+This is also called Local model means If you want bind the data within the appp don't want to store into the databases will use JSON Model
+3.I18n Model/resource Model
+This is also called Intenalization model will use this one for internalization purpose means if you want to translate/convert into multiple langauges will use i18n Model
+4.XML Model
+obsolete
+
+Views
+Total 4 Types of Views
+XML View = 99.99%  will use XML Views
+JS View
+HTML View
+JSON View
+
+
+
+Controller
+
+JS Controllers
+
+where will use actual logic for our application like rendering submitting the data and Navigating 1page to another page
+
+
+
+Data Binding Types
+1.1-way binding = Data flow from model to view(Data comes from backend but you cannot change in UI) 
+2.2-way binding = data flows from model to view and view to model
+(Data Comes from backend to view and you can change in view and changes will reflect in backend)
+
+3.1 time binding-Data flow from model to view once 
+ex:i18n Model
