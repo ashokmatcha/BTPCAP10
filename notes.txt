@@ -107,6 +107,11 @@ HTTP : Get
 2.Action : If you want to post,delete,update the date to table will use action
 To Define the action we have to use the keyword called action
 
+Again it contains 2 Types
+Bound and unbound
+
+IF we pass input and write inside entityset this is called Bound function/Action
+If we pass input or not pass input but if we not called inside entityset this is called unbound function/Action
 CRUD operations
 Create
 Read

@@ -35,7 +35,11 @@ if(data.Status == 'GoLive'){
 }
 
   })
-  
+    this.after ('CREATE', ProjectSet, async (projectSet, req) => {
+
+  req.notify(`Successfully created ID',${projectSet.ID}`)
+    console.log('After READ ProjectSet', projectSet)
+  })
   this.after ('READ', ProjectSet, async (projectSet, req) => {
     let DateofBirth;
     let CurrentYear;
@@ -60,6 +64,7 @@ emp.Age = CurrentYear - BirthYear;
       }
     }
   }
+  req.notify('Successfully created ID')
     console.log('After READ ProjectSet', projectSet)
   })
   this.before (['CREATE', 'UPDATE'], EmployeeSet, async (req) => {

@@ -152,6 +152,11 @@ annotate service.EmployeeSet with @(
             Value : Salary,
             Label : 'Salary',
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProjectService.promoteEmployee',
+            Label : 'promoteEmployee',
+        },
     ]
 );
 
