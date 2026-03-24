@@ -17,7 +17,7 @@ entity Project :cuid,Reusablecontent,Address1{
 Name : DataLength;
 StartDate : Date @title:'{i18n>StartDate}'; 
 EndDate:Date @title : '{i18n>EndDate}';
-Status:String(30)  @title : '{i18n>Status}' ;
+Status:Association to one Status @title : '{i18n>Status}' default #InProgress  ;//Status_Code
 Budget : Decimal(15,2) @title : '{i18n>Budget}';
 Currency: Currency ;
 Address:Address @title : '{i18n>Address}';
@@ -47,4 +47,15 @@ entity Timesheet : cuid,Reusablecontent{
     Date:Date ;
     Hours:Integer;
     Description : String(100) @title : 'Content';
+}
+
+entity Status{
+    Key Code : String(30) enum{
+        InProgress = 'InProgress';
+        GoLive = 'GoLive';
+        Completed = 'Completed';
+        Support = 'Support'
+    }
+    name : String(30);
+    Descr : String(30);
 }

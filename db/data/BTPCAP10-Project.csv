@@ -1,4 +1,4 @@
-ID,Name,StartDate,EndDate,Status,Budget,Currency_code,Location,Address
+ID,Name,StartDate,EndDate,Status_Code,Budget,Currency_code,Location,Address
 11310331-8896-4a38-9f27-3ef69c0e28be,Amazon,2023-12-17,2022-02-03,Completed,629.74,124,Location-11310331,Address-11310331
 11310332-4341-4cec-8813-4ddd301e3368,Flipkart,2013-11-13,2013-02-11,GoLive,462.4,124,Location-11310332,Address-11310332
 11310333-7340-42b0-b61c-d970219d66ca,Myntra,2003-07-11,2020-10-04,Support,573.21,124,Location-11310333,Address-11310333

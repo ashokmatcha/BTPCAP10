@@ -126,7 +126,7 @@ this.on('promoteEmployee',async(req)=>{
 //We  got the data
 //Validate data again Id in Employee table
 const data = await SELECT.one.from(EmployeeSet).where({
-  ID:req.data.ID
+  ID:req.params[1].ID
 })
 //IF Data is not there in table will through an error
 if(!data){
@@ -138,9 +138,9 @@ await UPDATE(EmployeeSet).set({
 Salary : data.Salary
 
 }).where({
-  ID:req.data.ID
+  ID:req.params[1].ID
 })
-const returndata = await SELECT.one.from(EmployeeSet).where({ID:req.data.ID})
+const returndata = await SELECT.one.from(EmployeeSet).where({ID:req.params[1].ID})
 return returndata;
 //if data available will give 30% Hike
 //update Table

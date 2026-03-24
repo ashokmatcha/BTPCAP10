@@ -85,7 +85,7 @@ annotate service.ProjectSet with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : Status,
+            Value : Status_Code,
         },
     ],
     UI.HeaderInfo : {
@@ -101,6 +101,9 @@ annotate service.ProjectSet with @(
         },
         ImageUrl : Currency.symbol,
     },
+    UI.SelectionFields : [
+        Status_Code,
+    ],
 );
 
 annotate service.EmployeeSet with @(
@@ -159,4 +162,43 @@ annotate service.EmployeeSet with @(
         },
     ]
 );
+
+annotate service.ProjectSet with {
+    Status @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'StatusSet',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : Status_Code,
+                    ValueListProperty : 'Code',
+                },
+            ],
+            Label : 'Value help for Status',
+        },
+        Common.ValueListWithFixedValues : true,
+)};
+
+annotate service.StatusSet with {
+    Code @Common.Text : name
+};
+
+annotate service.ProjectSet with {
+    Status_Code @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'StatusSet',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : Status_Code,
+                    ValueListProperty : 'Code',
+                },
+            ],
+            Label : 'Status Value Help',
+        },
+        Common.ValueListWithFixedValues : true,
+        Common.Label : 'Status_Code',
+)};
 
