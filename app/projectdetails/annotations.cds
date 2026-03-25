@@ -163,6 +163,15 @@ annotate service.EmployeeSet with @(
     ]
 );
 
+
+annotate service.StatusSet with {
+    Code @(
+        Common.Text : name,
+        Common.Text.@UI.TextArrangement : #TextFirst,
+    )
+};
+
+
 annotate service.ProjectSet with {
     Status @(
         Common.ValueList : {
@@ -172,33 +181,15 @@ annotate service.ProjectSet with {
                 {
                     $Type : 'Common.ValueListParameterInOut',
                     LocalDataProperty : Status_Code,
-                    ValueListProperty : 'Code',
+                    ValueListProperty : 'name',
                 },
             ],
             Label : 'Value help for Status',
         },
-        Common.ValueListWithFixedValues : true,
+        Common.ValueListWithFixedValues : false,
 )};
 
 annotate service.StatusSet with {
-    Code @Common.Text : name
+    name @Common.Text : Code
 };
-
-annotate service.ProjectSet with {
-    Status_Code @(
-        Common.ValueList : {
-            $Type : 'Common.ValueListType',
-            CollectionPath : 'StatusSet',
-            Parameters : [
-                {
-                    $Type : 'Common.ValueListParameterInOut',
-                    LocalDataProperty : Status_Code,
-                    ValueListProperty : 'Code',
-                },
-            ],
-            Label : 'Status Value Help',
-        },
-        Common.ValueListWithFixedValues : true,
-        Common.Label : 'Status_Code',
-)};
 

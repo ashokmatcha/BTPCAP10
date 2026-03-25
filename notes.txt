@@ -275,3 +275,24 @@ Data Binding Types
 
 3.1 time binding-Data flow from model to view once 
 ex:i18n Model
+
+
+Fiori Anonation
+
+LineItems
+Facet
+FieldGroup
+SelectionFields
+HeaderInfo
+ValueList
+
+
+Difference between V2 and V4
+
+V2 metadata by default XML format and it won't convert into json format
+V4 metadata by default XML format and we can format to JSON format too
+
+in V2 we have property called EDM.DATETIME 
+
+in V4 we hae propety called EDM.DATE
+
