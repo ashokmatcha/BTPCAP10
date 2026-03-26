@@ -1,0 +1,33 @@
+{
+    "xsappname": "btpcap10",
+     "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.ADRole",
+      "description": "ADRole"
+    },
+    {
+      "name": "$XSAPPNAME.ManagerRole",
+      "description": "ManagerRole"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "ADRole",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ADRole"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ManagerRole",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ManagerRole"
+      ],
+      "attribute-references": []
+    }
+  ]
+}

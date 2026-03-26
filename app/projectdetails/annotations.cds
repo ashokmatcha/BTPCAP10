@@ -164,14 +164,6 @@ annotate service.EmployeeSet with @(
 );
 
 
-annotate service.StatusSet with {
-    Code @(
-        Common.Text : name,
-        Common.Text.@UI.TextArrangement : #TextFirst,
-    )
-};
-
-
 annotate service.ProjectSet with {
     Status @(
         Common.ValueList : {
@@ -181,7 +173,7 @@ annotate service.ProjectSet with {
                 {
                     $Type : 'Common.ValueListParameterInOut',
                     LocalDataProperty : Status_Code,
-                    ValueListProperty : 'name',
+                    ValueListProperty : 'Code',
                 },
             ],
             Label : 'Value help for Status',

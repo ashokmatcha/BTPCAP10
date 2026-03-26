@@ -1,6 +1,6 @@
 @server=http://localhost:4004
-@username=alice
-@password=
+@username=Ashok
+@password=123
 
 
 ### ProjectSet
@@ -36,7 +36,7 @@ Authorization: Basic {{username}}:{{password}}
 {
   "Name": "BTPCAP",
   "StartDate": "2026-01-23",
-  "Status": "GoLive",
+  "Status_Code": "GoLive",
   "Budget": 546828236483.66
 }
 

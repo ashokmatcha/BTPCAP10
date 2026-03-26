@@ -17,12 +17,14 @@ Decimal(15,2);
 String
 
 
+
 Commands
  cds compile db/<filename> --to sql
  cds compile db/Schema --to sql =  To compile DB
  cds add data --records 5 = To add 5 dummy data 
  cds add handler = To create handler file i.e .js file in srv folder
  cds add http = To create http file
+ cds add xsuaa = To create XS-security.json file
 
 
 
@@ -295,4 +297,11 @@ V4 metadata by default XML format and we can format to JSON format too
 in V2 we have property called EDM.DATETIME 
 
 in V4 we hae propety called EDM.DATE
+
+
+grant = what ever permissions to give either CREATE,READ,UPDATE and DELETE   to = to whom your going to give this role
+
+{grant :'READ',to:'EmployeeRole'}
+{grant : ['READ','CREATE'],to : 'ManagerRole'}
+{grant : '*',to:'CEORole'}
 

@@ -5,7 +5,9 @@
   "dependencies": {
     "@cap-js-community/odata-v2-adapter": "^1.15.10",
     "@sap/cds": "^9",
-    "express": "^4"
+    "@sap/xssec": "^4",
+    "express": "^4",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
@@ -21,5 +23,31 @@
   ],
   "sapux": [
     "app/projectdetails"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "[development]": {
+        "auth": {
+      "kind": "mocked",
+        "users": {
+          "Ashok": {
+            "password": "123",
+            "roles": [
+              "ManagerRole"
+            ]
+          },
+          "Kumar": {
+            "password": "123",
+            "roles": [
+              "ADRole"
+            ]
+          }
+        }
+      }
+    }
+    }
+  }
 }

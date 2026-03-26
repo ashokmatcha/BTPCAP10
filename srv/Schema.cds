@@ -1,13 +1,31 @@
 using { BTPCAP10 } from '../db/Schema';
 
-service ProjectService{
-    entity ProjectSet @odata.draft.enabled as projection on BTPCAP10.Project; //we can achieve all CRUD operations
-    entity EmployeeSet as projection on BTPCAP10.Employee actions {
+service ProjectService  @(requires: 'authenticated-user'){
+    entity ProjectSet @(restrict: [
+    { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
+     { grant: ['READ'], to: 'ManagerRole' },
+  ]) @odata.draft.enabled as projection on BTPCAP10.Project{
+   ID, Name,StartDate,EndDate
+  }; //we can achieve all CRUD operations
+    entity EmployeeSet @(restrict: [
+    { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
+     { grant: ['READ'], to: 'ManagerRole' },
+  ]) as projection on BTPCAP10.Employee actions {
 action promoteEmployee() returns EmployeeSet;
 
     };
-    entity TimesheetSet as projection on BTPCAP10.Timesheet;
-    entity StatusSet as projection on BTPCAP10.Status;
+    entity TimesheetSet @(restrict: [
+    { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
+     { grant: ['READ'], to: 'ManagerRole' },
+  ]) as projection on BTPCAP10.Timesheet{ *
+
+  }excluding{
+    Date,Hours
+  };
+    entity StatusSet @(restrict: [
+    { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
+     { grant: ['READ'], to: 'ManagerRole' },
+  ]) as projection on BTPCAP10.Status;
 
     function getTotalProjectHours() returns Integer;
     function getEmployeeDOB(ID:UUID) returns Date;
