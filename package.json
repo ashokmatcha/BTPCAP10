@@ -4,6 +4,7 @@
   "description": "A simple CAP project.",
   "dependencies": {
     "@cap-js-community/odata-v2-adapter": "^1.15.10",
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
     "@sap/xssec": "^4",
     "express": "^4",
@@ -11,6 +12,7 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
     "cds-plugin-ui5": "^0.13.0"
   },
   "scripts": {
@@ -31,23 +33,26 @@
       },
       "[development]": {
         "auth": {
-      "kind": "mocked",
-        "users": {
-          "Ashok": {
-            "password": "123",
-            "roles": [
-              "ManagerRole"
-            ]
-          },
-          "Kumar": {
-            "password": "123",
-            "roles": [
-              "ADRole"
-            ]
+          "kind": "mocked",
+          "users": {
+            "Ashok": {
+              "password": "123",
+              "roles": [
+                "ManagerRole"
+              ]
+            },
+            "Kumar": {
+              "password": "123",
+              "roles": [
+                "ADRole"
+              ]
+            }
           }
         }
-      }
-    }
+      },
+      "destinations": true,
+      "html5-repo": true,
+      "workzone": true
     }
   }
 }

@@ -305,3 +305,31 @@ grant = what ever permissions to give either CREATE,READ,UPDATE and DELETE   to 
 {grant : ['READ','CREATE'],to : 'ManagerRole'}
 {grant : '*',to:'CEORole'}
 
+
+MTA.YAML(Multi Target Application or Descriptor File)
+It contains all the modules information like DB,SRV and APP and it contains resources means  to run application we need XSUAA and Workzone 
+
+AppRouter: It is centrailzed router all incoming and outgoing sevices will monitor
+it has 2 Types
+1.Manged AppRouter or SAP AppRouter
+It is provided by SAP to handle incoming and outgoing services examples are like Workzone ,XSUAA ,Database and Destination Services
+2.Standalone AppRouter or Custom AppRouter
+What we do manually 
+
+Steps to Deploy Application to Cloud Foundry
+below 3 we have to very first time
+cds add hana 
+cds add Workzone
+cds add mta
+we have to do each time
+mbt build
+cf deploy mta_archives/BTPCAP10_1.0.0.mtar
+
+
+
+
+
+
+Catalog:Collections of Applications
+
+Group:Collection of Catalogs

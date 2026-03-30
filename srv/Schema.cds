@@ -2,11 +2,9 @@ using { BTPCAP10 } from '../db/Schema';
 
 service ProjectService  @(requires: 'authenticated-user'){
     entity ProjectSet @(restrict: [
-    { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
+    { grant: '*', to: 'ADRole' },
      { grant: ['READ'], to: 'ManagerRole' },
-  ]) @odata.draft.enabled as projection on BTPCAP10.Project{
-   ID, Name,StartDate,EndDate
-  }; //we can achieve all CRUD operations
+  ]) @odata.draft.enabled as projection on BTPCAP10.Project; //we can achieve all CRUD operations
     entity EmployeeSet @(restrict: [
     { grant: ['READ','UPDATE','CREATE'], to: 'ADRole' },
      { grant: ['READ'], to: 'ManagerRole' },
